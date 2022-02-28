@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Festive&family=Noto+Sans+TC:wght@300;400;700&display=swap');
+
+$theme-color: rgba( 89, 153, 50, 80%);
+$shadow: 0 4px 4px 0 rgba(196, 196, 196, 21%);
+$font-size-normal: 1.5em;
+$font-size-large: 2em;
+$btn-border: 1px solid #D0D0D0;
+$border-line: 1px solid whitesmoke;
+
+@mixin flex-basis {
+    flex: 1;
+    flex-basis: 20px;
+    margin: 23px 0;
+}
+
+@mixin basic-btn($radius) {
+    border-style: none;
+    background-color: $theme-color;
+    color: white;
+    border-radius: $radius;
+}
+
+@mixin anchor-style {
+    color: white;
+    text-decoration: none;
+}
