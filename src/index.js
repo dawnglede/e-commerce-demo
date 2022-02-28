@@ -146,7 +146,7 @@ export function createFooter(mainroute, tagName) {
     `).appendTo(tagName);
 }
 
-//$(function() {
+$(function() {
     //load homepage
     createItemCard(itemData);
     createImg(imgList);
@@ -159,5 +159,5 @@ export function createFooter(mainroute, tagName) {
     $('.purchase__btn').on('click', addToCart);
     $('.add').on('click', addQuantity);
     $('.minor').on('click', minorQuantity);
-//});
+});
 

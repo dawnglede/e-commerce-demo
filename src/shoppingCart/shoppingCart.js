@@ -74,7 +74,6 @@ function countCartQuantity() {
 }
 
 function countSubTotal() {
-    //const className = target.innerHTML === '+'? '.cart__card__add': '.cart__card__minor';
     const quantity = $(this).siblings('.quantity').text();
     const itemName = $(this).parent().siblings('.cart__card__name').attr('id');
     const order = cart.findIndex(item => item.name === itemName)
@@ -83,7 +82,6 @@ function countSubTotal() {
     }
 
    const subTotal = cart[order].quantity * cart[order].price;
-   //console.log(quantity);
    const subTotalTag = $(this).parent().siblings('.cart__card__sub__total');
    countTotal();
    return subTotalTag.text(`$${subTotal.toString()}`)
@@ -96,18 +94,11 @@ $(function() {
     noItem()
     loadCartItem()
     countTotal()
+
     $('.cart__card__add').on('click', addQuantity);
     $('.cart__card__minor').on('click', minorQuantity);
     $('.delete').on('click', deleteItem);
-    /*$('.cart__card__container').on('click', function(e) {
-        let target = e.currentTarget;
-        //if (target.innerHTML != '+' && '-') return;
-        countSubTotal(target);
-
-    })*/
     $('.cart__card__minor').on('click', countSubTotal);
     $('.cart__card__add').on('click', countSubTotal);
-
-
 });
 
